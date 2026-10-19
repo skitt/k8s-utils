@@ -46,7 +46,6 @@ func (s Set[T]) Clear() Set[T] {
 }
 
 // KeySet creates a Set[E] from a keys of a map[E](? extends interface{}).
-// If the value passed in is not actually a map, this will panic.
 func KeySet[E comparable, A any](theMap map[E]A) Set[E] {
 	ret := Set[E]{}
 	for key := range theMap {
